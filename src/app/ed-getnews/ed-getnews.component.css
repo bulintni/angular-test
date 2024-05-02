@@ -1,0 +1,32 @@
+th {
+  background-color: rgb(202, 215, 243);
+  box-shadow: 5px 10px 0.5;
+}
+
+thead {
+  height: 50px;
+}
+
+thead th{
+  height: 50px;
+  vertical-align: middle;
+}
+
+.form-check-input:checked {
+  background-color: rgb(44, 165, 44);
+}
+
+
+.form-check-input:checked + .form-check-label::before {
+  background-color: green;
+}
+
+
+.form-switch .form-check-input {
+  width: 38px;
+  height: 22px;
+}
+
+td {
+  vertical-align: middle;
+}

@@ -1,0 +1,40 @@
+<mat-card [style.height.px]="300">
+  <table class="table rounded-2 w-auto">
+    <thead class="table-header">
+      <tr>
+        <th scope="col" class="col-1 text-end">ลำดับ</th>
+        <th scope="col" class="col-4 text-center">ชื่อเรื่อง</th>
+        <th scope="col" class="col-2 text-center">วันที่สร้าง</th>
+        <th scope="col" class="col-2 text-center">จัดการ</th>
+      </tr>
+    </thead>
+  
+    <tbody *ngFor="let userData of user" class="shadow-sm">
+      <tr class="my-2">
+        <td scope="row" class="text-center d-flex align-items-center justify-content-evenly">
+          <span class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" 
+            [checked] = 'userData.Status'
+            (change)="editStatus(userData.Status)"
+            [disabled]="true"
+            >
+          </span>
+          {{userData.NewsId}}
+        </td>
+        <td class="text-center">{{userData.NameNews}}</td>
+        <td class="text-center" type="date">
+          {{ userData.UpdatedDate | date: 'dd/MM/yyyy' }}
+        </td>
+        <td class="text-center">
+          <i class="fa-solid fa-eye me-1" (click)="openViewDetail(userData.NameNews, userData.Detail, userData.Status)"></i>
+          <i class="fa-solid fa-pen-to-square me-1" (click)="openEditDetail(userData.NameNews, userData.Detail, userData.Status)"></i>
+          <i class="fa-solid fa-trash-can me-1" (click)="deleteList()"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</mat-card>
+<mat-paginator [length]="100"
+    [pageSize]="5"
+    aria-label="Select page">
+</mat-paginator>

@@ -1,0 +1,50 @@
+.header-style {
+  background-color: rgb(1, 1, 110);
+}
+
+::ng-deep .mat-dialog-title {
+  color: white;
+}
+
+.form-container {
+  padding: 30px;
+}
+
+label {
+  color: rgb(0, 0, 102);
+}
+
+label::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-color {
+  background-color: rgb(62, 106, 148);
+  color: white;
+  padding: 8px 40px;
+}
+
+.btn-success {
+  padding: 8px 40px;
+}
+
+.form-check-input:checked {
+  background-color: rgb(44, 165, 44);
+}
+
+
+.form-check-input:checked + .form-check-label::before {
+  background-color: green;
+}
+
+
+.form-switch .form-check-input {
+  width: 50px;
+  height: 30px;
+}
