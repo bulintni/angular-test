@@ -26,7 +26,6 @@ export class EdGetnewsComponent {
   ngOnInit ():void {
     console.log(this.user)
     
-    
   }
 
   editStatus(status: number): boolean {
@@ -72,7 +71,7 @@ export class EdGetnewsComponent {
     })
   }
 
-  deleteList() {
-
+  deleteList(idNews:number) {
+    this.user.splice(idNews,1)
   }
 }

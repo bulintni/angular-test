@@ -24,10 +24,11 @@
     <p class="me-5 pt-2">สถานะ</p>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-      [checked] = "form.value.Status"
+      formControlName="Status"
       (change)="setStatus()"
       [disabled]="disableForm"
       >
+      <!-- <mat-slide-toggle [(ngModel)]="form.value.Status">Switch</mat-slide-toggle> -->
     </div>
   </div>
   
